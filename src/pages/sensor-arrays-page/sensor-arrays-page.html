@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Actieve sensor opstellingen
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col col-6 *ngFor="let sensorArray of sensorArrays">
+      <ion-card>
+        <ion-card-header>{{sensorArray.identifier}}</ion-card-header>
+        <ion-item>
+          <p> {{sensorArray.arrayDescription}} </p>
+        </ion-item>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src={{sensorArray.associatedTrainee.imageUrl}}>
+          </ion-avatar>
+          <h2>{{sensorArray.associatedTrainee.name}}</h2>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="presentTraineePickerModal(sensorArray.associatedTrainee)">
+              <ion-icon name="person"></ion-icon>
+              <div>Kies trainee</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  
+</ion-content>

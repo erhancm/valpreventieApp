@@ -1,0 +1,8 @@
+{
+  "name": "valpreventie-onderzoek-app-poc",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
